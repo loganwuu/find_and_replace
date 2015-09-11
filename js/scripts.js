@@ -1,6 +1,8 @@
 var findAndReplace = function(inputString, findWord, replaceWord) {
     //removes punctuations
     var inputString = inputString.replace(/[.,-\/#!$%\^&\*;:{}=\-_`~()]/g, '');
+    //downcase the string
+    var inputString = inputString.toLowerCase();
     //converts the string to an array
     var wordsArray = inputString.split(' ');
     for (var i = 0; i <wordsArray.length; i++) {
@@ -10,6 +12,7 @@ var findAndReplace = function(inputString, findWord, replaceWord) {
     }
     //converts the array back to a string
     var outputString = wordsArray.join(' ');
+    //no match condition
     if (outputString === inputString) {
         return 'Sorry, no match found between the words in your sentence and the replacing word.'
     } else {
