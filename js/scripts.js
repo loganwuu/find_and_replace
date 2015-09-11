@@ -1,10 +1,12 @@
-var findAndReplace = function(inputString, findWord, replaceString) {
+var findAndReplace = function(inputString, findWord, replaceWord) {
+    var inputString = inputString.replace(/[.,-\/#!$%\^&\*;:{}=\-_`~()]/g, '');
     var wordsArray = inputString.split(' ');
     for (var i = 0; i <wordsArray.length; i++) {
         if (findWord === wordsArray[i]) {
-            wordsArray.splice(i, 1, replaceString);
+            wordsArray.splice(i, 1, replaceWord);
         }
     }
+    debugger;
     return wordsArray.join(' ');
 };
 
