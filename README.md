@@ -4,8 +4,7 @@
 
 #### By Logan Wu
 
-## Description
-Example:
+## Example
 **Sample input**: "Hello world"
 **Find string**: "world"
 **Replace string**: "universe"
