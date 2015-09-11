@@ -13,7 +13,10 @@
 
 ## Specs
 
-* 
+* breaks the string into an array of elements.
+* finds the word that is to be replaced by another word.
+* reconstructs the array with the new word.
+* outputs the array as a string
 
 ## Setup
 
