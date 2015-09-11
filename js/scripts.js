@@ -1,24 +1,28 @@
 var findAndReplace = function(inputString, findWord, replaceWord) {
+    //removes punctuations
     var inputString = inputString.replace(/[.,-\/#!$%\^&\*;:{}=\-_`~()]/g, '');
+    //converts the string to an array
     var wordsArray = inputString.split(' ');
     for (var i = 0; i <wordsArray.length; i++) {
         if (findWord === wordsArray[i]) {
             wordsArray.splice(i, 1, replaceWord);
         }
     }
-    debugger;
+    //converts the array back to a string
     return wordsArray.join(' ');
 };
 
+$(document).ready(function(){
+  $("form#findAndReplace").submit(function(event) {
+        var inputString = $("input#inputString").val();
+        var findWord = $("input#findWord").val();
+        var replaceWord = $("input#replaceWord").val();
+        var result = findAndReplace(inputString, findWord, replaceWord);
 
-// $(document).ready(function(){
-//   $("form#wordOrder").submit(function(event) {
-//         var string = $("input#string").val();
-//         var result = wordOrder(string);
-//         $('.wordOrder').empty();
-//         for (key in result) {
-//             $('.wordOrder').append(key + ": " + result[key] + " ");
-//         }
-//         event.preventDefault();
-//     });
-// });
+        $(".findAndReplace").text(result);
+        // $('.wordOrder').empty();
+        $("#result").show();
+
+        event.preventDefault();
+    });
+});
