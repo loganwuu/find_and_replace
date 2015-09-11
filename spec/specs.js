@@ -1,17 +1,14 @@
-describe('wordOrder', function() {
-    it("counts a string with one word", function(){
-        expect(wordOrder("hello")).to.eql({"hello": 1});
+describe('findAndReplace', function() {
+    it("breaks the string into an array of elements", function(){
+        expect(findAndReplace("hello world")).to.eql(["hello", "world"]);
     });
 
-    it("counts a string with same word which appears two times", function(){
-        expect(wordOrder("hello hello")).to.eql({"hello": 2});
+    it("finds the word that is to be replaced by another word and reconstructs the array with the new word", function(){
+        expect(findAndReplace("hello world", "world", "universe")).to.eql(["hello", "universe"]);
     });
 
-    it("counts a string with two different words each appears one time", function(){
-        expect(wordOrder("hello world")).to.eql({"hello": 1, "world": 1});
+    it("outputs the array as a string", function(){
+        expect(findAndReplace("hello world", "world", "universe")).to.eql("hello universe");
     });
 
-    it("counts a string with two different words each appears different times", function(){
-        expect(wordOrder("hello world world")).to.eql({"world": 2, "hello": 1});
-    });
 });

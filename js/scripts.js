@@ -1,5 +1,11 @@
-var findandreplace = function(string) {
-
+var findAndReplace = function(inputString, findWord, replaceString) {
+    var wordsArray = inputString.split(' ');
+    for (var i = 0; i <wordsArray.length; i++) {
+        if (findWord === wordsArray[i]) {
+            wordsArray.splice(i, 1, replaceString);
+        }
+    }
+    return wordsArray.join(' ');
 };
 
 

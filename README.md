@@ -5,7 +5,7 @@
 #### By Logan Wu
 
 ## Description
-
+Example:
 **Sample input**: "Hello world"
 **Find string**: "world"
 **Replace string**: "universe"
@@ -13,10 +13,10 @@
 
 ## Specs
 
-* breaks the string into an array of elements.
-* finds the word that is to be replaced by another word.
-* reconstructs the array with the new word.
-* outputs the array as a string
+* Breaks the string into an array of elements.
+* Finds the word to be replaced by another word.
+* Reconstructs the array with the new word.
+* Outputs the array as a string
 
 ## Setup
 
