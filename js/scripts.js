@@ -9,7 +9,12 @@ var findAndReplace = function(inputString, findWord, replaceWord) {
         }
     }
     //converts the array back to a string
-    return wordsArray.join(' ');
+    var outputString = wordsArray.join(' ');
+    if (outputString === inputString) {
+        return 'Sorry, no match found between the words in your sentence and the replacing word.'
+    } else {
+        return outputString;
+    }
 };
 
 $(document).ready(function(){
@@ -20,7 +25,6 @@ $(document).ready(function(){
         var result = findAndReplace(inputString, findWord, replaceWord);
 
         $(".findAndReplace").text(result);
-        // $('.wordOrder').empty();
         $("#result").show();
 
         event.preventDefault();
