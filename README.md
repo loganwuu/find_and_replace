@@ -8,7 +8,7 @@
 **Sample input**: "Hello world"
 **Find string**: "world"
 **Replace string**: "universe"
-**Output**: "Hello universe"
+**Output**: "hello universe"
 
 ## Specs
 
