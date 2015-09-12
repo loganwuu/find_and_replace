@@ -13,9 +13,9 @@
 ## Specs
 
 * Removes any punctuation.
-* Downcase the input string.
-* Finds the word that is to be replaced by another word and reconstructs the array with the new word and outputs as a new string.
-* Returns 'Sorry, no match found between the words in your sentence and the replacing word.' for no match.
+* Downcases the input string.
+* Finds the word that is to be replaced by another word, reconstructs the array with the new word and outputs as a new string.
+* Returns 'Sorry, no match found between the words in your sentence and the replacing word.' if no match.
 
 ## Setup
 
